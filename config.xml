@@ -4,9 +4,9 @@
 
 
 	<module name="controler">
-		<param name="outputDirectory" value="I:\MATSim\subwayexample\outputfullschedule" />
+		<param name="outputDirectory" value="outputhalfschedule-0.01" />
 		<param name="firstIteration" value="1" />
-		<param name="lastIteration" value="1" />
+		<param name="lastIteration" value="5" />
 		<param name="eventsFileFormat" value="xml" />
 		<param name="mobsim" value="qsim" />
 		<param name="runId" value="RouteA" />
@@ -16,7 +16,7 @@
 	</module>
 
 	<module name="plans" >
-		<param name="inputPlansFile" value="population.xml" />
+		<param name="inputPlansFile" value="population3.xml" />
 	</module>
 	<module name="network" >
 		<param name="inputNetworkFile" value="finalnetwork.xml" />
@@ -31,9 +31,9 @@
 	<module name="qsim">
 		<param name="startTime" value="00:00:00"/>
 		<param name="endTime" value="24:00:00"/>
-		<param name="flowCapacityFactor" value="0.1"/>
-		<param name="storageCapacityFactor" value="0.375"/>
-		<param name="mainMode" value="car,subway,bicycle" />
+		<param name="flowCapacityFactor" value="0.01"/>
+		<param name="storageCapacityFactor" value="0.03"/>
+		<param name="mainMode" value="car,subway" />
 	</module>
 
 
@@ -72,8 +72,8 @@
 				<param name="latestStartTime" value="11:00:00" />
 				<param name="closingTime" value="20:00:00" />
 			</parameterset>
-			
-			
+
+
 			<parameterset type="activityParams" >
 				<param name="activityType" value="Shopping" />
 				<param name="typicalDuration" value="01:00:00" />
@@ -81,7 +81,7 @@
 				<param name="latestStartTime" value="11:00:00" />
 				<param name="closingTime" value="20:00:00" />
 			</parameterset>
-			
+
 			<parameterset type="activityParams" >
 				<param name="activityType" value="Other" />
 				<param name="typicalDuration" value="01:00:00" />
@@ -89,7 +89,7 @@
 				<param name="latestStartTime" value="11:00:00" />
 				<param name="closingTime" value="20:00:00" />
 			</parameterset>
-			
+
 			<parameterset type="modeParams" >
 				<param name="constant" value="-4.0" />
 				<param name="marginalUtilityOfDistance_util_m" value="0.0" />
@@ -151,7 +151,7 @@
 	<module name="subtourModeChoice" >
 		<param name="modes" value="car,pt" />
 	</module>
-	
+
 	<module name="transitRouter" >
 
 		<!-- additional time the router allocates when a line switch happens. Can be interpreted as a 'safety' time that agents need to safely transfer from one line to another -->
